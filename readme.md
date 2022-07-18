@@ -4,9 +4,13 @@
 
 <img src="images/bme280-smd-top.png" width="240px">
 
-This PMOD connects the Bosch BME280 humidity, pressure and temperature sensor over I2C, using Digilent's PMOD interface type 6 and 6A per PMOD specification v1.3.1. The PMOD module can be chained to add additional I2C devices to the bus. The I2C pull-up resistors can be enabled/disabled using DIP switches, and switch 2 toggles the sensors I2C address between 0x76 and 0x77.
+This PMOD connects the Bosch BME280 humidity, pressure and temperature sensor over I2C, using Digilent's PMOD interface type 6A per PMOD specification v1.3.1. The PMOD module can be chained to add additional I2C devices to the bus. The I2C pull-up resistors can be enabled/disabled using DIP switches, and switch 2 toggles the sensors I2C address between 0x76 and 0x77.
 
 http://fpga.fm4dd.com/
+
+This design is registered under the OSHWA Open Source Hardware Self-Certification:
+
+<a href="https://certification.oshwa.org/jp000015.html"><img src="images/oshw-reg-jp000015.svg" style="width:100px; vertical-align: middle"></a>
 
 ### Schematic
 ![BME280 PMOD Schematics](images/schema.png)
@@ -16,20 +20,14 @@ http://fpga.fm4dd.com/
 
 ### PMOD Interface Pin Assignments
 
-PMOD |	Label |	Description
------|--------|---------------
-1    |	-     |	Not connected
-2    |	-     |	Not connected
-3    |	SCL   |	I2C clock
-4    |  SDA   | I2C data
-5    |  GND   | ground
-6    |  3V3   | 3.3V
-7    |	-     |	Not connected
-8    |	-     |	Not connected
-9    |  -     | Not connected
-10   |  -     |	Not connected
-11   |  GND   | ground
-12   |  3V3   | 3.3V
+Pin  |	Label |	Description   | Pin  |	Label |	Description
+-----|--------|---------------|------|--------|---------------
+1    |	-     |	Not connected |7     | -      | Not connected
+2    |	-     |	Not connected |8     | -      | Not connected
+3    |	SCL   |	I2C clock     |9     | -      | Not connected
+4    |  SDA   | I2C data      |10    | -      | Not connected
+5    |  GND   | ground        |11    | GND    | ground
+6    |  3V3   | 3.3V          |12    | 3V3    | 3.3V
 
 All pins are passed through from connector J1 to J2, allowing to chain multiple type 6/6A PMODs.
 
